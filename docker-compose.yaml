@@ -1,0 +1,14 @@
+version: '3.9'
+
+services:
+  react_native_app:
+    build:
+      context: ./cliniquenative
+    tty: true
+    ports:
+      - '8081:8081'
+      - '19006:19006'
+      - '19001:19001'
+      - '19002:19002'
+    volumes:
+      - ./:/usr/app
